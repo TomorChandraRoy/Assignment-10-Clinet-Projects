@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Foother = () => {
-    // foother complete
+    
     return (
         <footer className="footer  footer-center p-10 bg-gray-200">
             <aside >
