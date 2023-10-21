@@ -20,6 +20,7 @@ const AuthPeovider = ({ children }) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
+   
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -46,11 +47,7 @@ const AuthPeovider = ({ children }) => {
         }
     }, []);
 
-    //  const fff =  useEffect(()=>{
-    //     fetch('http://localhost:5000/brandproducts')
-    //     .then(res => res.json())
-    //     .then(data => (data))
-    // },[])
+
 
     const authInfo = {
         user,
@@ -59,7 +56,7 @@ const AuthPeovider = ({ children }) => {
         signInWithGoogle,
         loading,
         logOut,
-        //  fff
+        
     }
 
     return (

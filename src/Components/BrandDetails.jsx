@@ -5,8 +5,7 @@ const BrandDetails = () => {
     const detailsData = useLoaderData();
     console.log(detailsData);
     const handleAddProduct = ()=>{
-        console.log("fjghfgjhfjjfhgf");
-        fetch('http://localhost:5000/addproducts',{
+        fetch('https://technology-and-electronics-server-sigma.vercel.app/addproducts',{
             method:"POST",
             headers:{
                 "content-type": "application/json"

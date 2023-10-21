@@ -14,12 +14,12 @@ import Home from './Components/Home';
 import SignUp from './Components/SignUp';
 import AuthPeovider from './Provider/AuthPeovider';
 import PrivateRoute from './Routes/PrivateRoute';
-import BrandProducts from './Components/brandProducts';
 import BrandDetails from './Components/BrandDetails';
 import MyCart from './Components/MyCart';
 import Terms from './Components/Terms';
 import AboutUs from './Components/AboutUs';
 import UpdateProduct from './Components/UpdateProduct';
+import BrandProducts from './Components/BrandProducts';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>fetch("http://localhost:5000/brand"),
+        loader: () =>fetch("https://technology-and-electronics-server-sigma.vercel.app/brand"),
         
       },
       {
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
       {
         path: "/updateproduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/brandproducts/${params.id}`)
+        loader: ({params})=> fetch(`https://technology-and-electronics-server-sigma.vercel.app/brandproducts/${params.id}`)
       },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/cardproducts')
+        loader: ()=> fetch('https://technology-and-electronics-server-sigma.vercel.app/cardproducts')
       },
       {
         path: "/terms",
@@ -66,14 +66,14 @@ const router = createBrowserRouter([
       {
         path: "/brand/:id",
         element: <BrandProducts></BrandProducts>,
-        loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`)
+        loader: ({params}) => fetch(`https://technology-and-electronics-server-sigma.vercel.app/brand/${params.id}`)
         
       },
       
       {
         path:"/brandetails/:id",
         element: <BrandDetails></BrandDetails>,
-        loader: ({params})=>fetch(`http://localhost:5000/brandproducts/${params.id}`)
+        loader: ({params})=>fetch(`https://technology-and-electronics-server-sigma.vercel.app/brandproducts/${params.id}`)
         
       },
       {

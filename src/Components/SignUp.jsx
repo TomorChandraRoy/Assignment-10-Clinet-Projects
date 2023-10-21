@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthPeovider";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 
 
@@ -33,8 +34,12 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
-                // swal("Good !", "You Accounts successful!", "success");
-                alert('Good !", "You Accounts successful!", "success')
+                Swal.fire(
+                    'Good!',
+                    'You Accounts successful!',
+                    'success'
+                  )
+                
                 e.target.reset();
                 updateProfile(result?.user, {
                     displayName: name,
@@ -44,8 +49,11 @@ const SignUp = () => {
             })
             .catch(error => {
                 console.log(error);
-                // swal("Sorry!", "Your email is already there. !", "error");
-                alert('Sorry!", "Your email is already there. !", "error')
+                Swal.fire(
+                    'Invalid!',
+                    'Your email is already there!',
+                    'error'
+                  )
             })
     }
     return (

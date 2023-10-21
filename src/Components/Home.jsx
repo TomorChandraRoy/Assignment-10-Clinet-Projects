@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import GetDiscount from "./GetDiscount";
 import MarqueePage from "./MarqueePage";
 import BestProducts from "./BestProducts";
+
 const Home = () => {
     const data = useLoaderData()
     console.log(data);

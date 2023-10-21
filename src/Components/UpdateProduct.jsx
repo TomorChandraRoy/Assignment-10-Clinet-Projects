@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const allUpdateProducts = useLoaderData();
-    console.log("gggggggg",allUpdateProducts);
+    console.log(allUpdateProducts);
     const {_id, photo, name,brand, price, description, catogray, rating } = allUpdateProducts
 
 
@@ -21,7 +21,7 @@ const UpdateProduct = () => {
 
         const newBrand = { name, brand, price, description, catogray, rating, photo }
         // console.log(newBrand);
-        fetch(`http://localhost:5000/brandproducts/${_id}`, {
+        fetch(`https://technology-and-electronics-server-sigma.vercel.app/brandproducts/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

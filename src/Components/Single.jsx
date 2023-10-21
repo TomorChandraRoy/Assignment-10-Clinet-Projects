@@ -3,16 +3,9 @@ import { Link,  } from 'react-router-dom';
 
 
 const Single = ({ singleData1 }) => {
-    // const navigate = useNavigate();
+    
 
     const { name, brand, price, catogray, rating, photo } = singleData1;
-    // console.log(singleData1);
-
-    // const handleDelete = _id =>{
-    //     console.log('delete okay : ',  _id);
-    //     navigate('/MyCart')
-        
-    // }
 
     return (
         <div className=''>

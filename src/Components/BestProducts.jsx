@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
+
 const BestProducts = ({ singleData1 }) => {
     const {_id, photo, name } = singleData1;
     console.log(_id);
 
- 
-   
     return (
         <>
         <div className="my-5 ">

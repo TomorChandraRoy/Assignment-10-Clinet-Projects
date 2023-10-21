@@ -19,7 +19,7 @@ const MyCartDetails = ({ addData1,setProducts,products}) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 
-                fetch(`http://localhost:5000/cardproducts/${_id}`,{
+                fetch(`https://technology-and-electronics-server-sigma.vercel.app/cardproducts/${_id}`,{
                     method: 'DELETE'
                 })
                 .then(res=>res.json())

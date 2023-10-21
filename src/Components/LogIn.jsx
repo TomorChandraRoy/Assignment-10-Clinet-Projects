@@ -1,29 +1,30 @@
 import { useContext } from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthPeovider";
+import Swal from "sweetalert2";
 
 
 
 const LogIn = () => {
 
   const {logInUser,signInWithGoogle}=useContext(AuthContext)
-  const navigat = useNavigate()
-  const loaction =useLocation();
-    console.log('loaction in thr login page',loaction);
-    
+  const Navigat = useNavigate();
+
     const handleGooleSignIn =()=>{
       signInWithGoogle()
       .then(result =>{
         const googleLogIn =result.user
         console.log(googleLogIn);
-        navigat('/')
+        Navigat('/')
         
       })
       .catch(error=>{
         console.log(error);
       })
     }
-
+    const loaction =useLocation();
+    console.log('loaction in thr login page',loaction);
+    
     const handleSignIn = e =>{
         e.preventDefault();
         const email = e.target.email.value;
@@ -33,14 +34,22 @@ const LogIn = () => {
         logInUser(email,password)
         .then(result=>{
             console.log(result.user)
-            alert('sssss')
-            Navigate(loaction?.state? loaction.state :'/' );
-            navigat('/')
+            Swal.fire(
+              'Good job!',
+              'Your Login Success!',
+              'success'
+            )
+            Navigat(loaction?.state? loaction.state :'/' );
+            Navigat('/')
             
         })
         .catch(error=>{
-            console.log(error.message);
-           alert('fffff')
+            console.log(error);
+            Swal.fire(
+              'Invalid!',
+              'Your Email and Password Incorrect!',
+              'error'
+            )
           
         })
 

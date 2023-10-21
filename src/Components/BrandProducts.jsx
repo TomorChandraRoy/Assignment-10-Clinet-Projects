@@ -26,11 +26,11 @@ const BrandProducts = () => {
     //    console.log(currentProduct);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/brandproducts`)
+        fetch(`https://technology-and-electronics-server-sigma.vercel.app/brandproducts`)
             .then(res => res.json())
             .then(data => setCurrentProduct(data))
 
-        fetch(`http://localhost:5000/sliderproducts`)
+        fetch(`https://technology-and-electronics-server-sigma.vercel.app/sliderproducts`)
             .then(res => res.json())
             .then(data => setSliderItem(data))
     }, [])
