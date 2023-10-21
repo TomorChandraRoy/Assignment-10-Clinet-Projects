@@ -74,6 +74,8 @@ const MyCartDetails = ({ addData1,setProducts,products}) => {
 };
 
 export default MyCartDetails;
+
+
 MyCartDetails.propTypes ={
     addData1: PropTypes.node,
     setProducts: PropTypes.node,
