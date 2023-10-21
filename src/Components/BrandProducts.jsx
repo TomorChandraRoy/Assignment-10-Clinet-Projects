@@ -23,7 +23,7 @@ const BrandProducts = () => {
     // console.log(sliderItem);
     const brand = useLoaderData();
     // console.log(brand);
-    //    console.log(currentProduct);
+   
 
     useEffect(() => {
         fetch(`https://technology-and-electronics-server-sigma.vercel.app/brandproducts`)

@@ -5,7 +5,7 @@ import auth from "../../firebase.config";
 
 export const AuthContext = createContext(null);
 
-
+// authprovider complete
 
 const AuthPeovider = ({ children }) => {
     const [user, setuser] = useState(null);

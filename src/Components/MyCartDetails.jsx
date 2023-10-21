@@ -40,6 +40,7 @@ const MyCartDetails = ({ addData1,setProducts,products}) => {
             }
         })
     }
+    // myCartDetails complete
     return (
         <div>
             <div className="my-5">

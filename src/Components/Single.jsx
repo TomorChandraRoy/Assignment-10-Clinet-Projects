@@ -35,7 +35,7 @@ const Single = ({ singleData1 }) => {
 
                         <Link ><button className="btn">Update</button></Link>
                     
-                        {/* hoyni */}
+                        
                         <Link ><button  className="btn">Details</button></Link>
 
                         </div>
