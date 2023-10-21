@@ -7,7 +7,7 @@ import logo5 from "../image/img5.png";
 import logo6 from "../image/img6.png";
 
 const MarqueePage = () => {
-  // all done
+ 
     return (
         <div className="my-10 ">
         <h2 className=" mb-7 font-extrabold  text-black w-fit mx-auto px-2 py-1 rounded text-3xl">Proud Marketing <span className="text-green-500">Partners</span> with</h2>
