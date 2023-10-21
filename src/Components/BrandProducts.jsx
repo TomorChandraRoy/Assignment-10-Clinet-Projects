@@ -41,7 +41,7 @@ const BrandProducts = () => {
 
 
 
-    {/* <div key={idx}>{product.name}:{product.price} */ }
+
     return (
         <div>
         {
